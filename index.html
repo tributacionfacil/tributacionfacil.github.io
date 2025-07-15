@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tributación Fácil - Asesoría Tributaria y Contable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- WhatsApp Float Button -->
+    <a href="https://api.whatsapp.com/send?phone=18298695298&text=Hola%2C%20somos%20Tributaci%C3%B3n%20F%C3%A1cil%2C%20c%C3%B3mo%20podemos%20ayudarte%3F" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 floating-button hover:bg-green-600 transition-colors">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Instagram Link -->
+    <a href="https://www.instagram.com/tributacionfacil" target="_blank" class="fixed bottom-8 left-8 bg-pink-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 floating-button hover:bg-pink-700 transition-colors">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                    <i class="fas fa-calculator text-xl"></i>
+                </div>
+                <a href="#" class="text-xl font-bold text-blue-800">Tributación <span class="text-blue-600">Fácil</span></a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-blue-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-blue-800 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#servicios" class="text-blue-800 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#nosotros" class="text-blue-800 hover:text-blue-600 font-medium">Nosotros</a>
+                <a href="#contacto" class="text-blue-800 hover:text-blue-600 font-medium">Contacto</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#inicio" class="block py-2 text-blue-800 hover:text-blue-600">Inicio</a>
+            <a href="#servicios" class="block py-2 text-blue-800 hover:text-blue-600">Servicios</a>
+            <a href="#nosotros" class="block py-2 text-blue-800 hover:text-blue-600">Nosotros</a>
+            <a href="#contacto" class="block py-2 text-blue-800 hover:text-blue-600">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Simplificamos tu contabilidad y tributación</h1>
+                <p class="text-xl mb-8 opacity-90">Expertos en asesoría fiscal, contable y legal para que tu negocio cumpla con todas las obligaciones tributarias de manera eficiente.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contacto" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-center">Contáctanos</a>
+                    <a href="https://api.whatsapp.com/send?phone=18298695298&text=Hola%2C%20somos%20Tributaci%C3%B3n%20F%C3%A1cil%2C%20c%C3%B3mo%20podemos%20ayudarte%3F" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-center">
+                        <i class="fas fa-phone mr-2"></i> 829-869-5298
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Asesoría contable" class="rounded-xl shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Nuestros Servicios</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300">
+                    <div class="bg-blue-100 p-6 flex justify-center">
+                        <i class="fas fa-balance-scale text-5xl text-blue-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Prueba Pericial Contable</h3>
+                        <p class="text-gray-600">Análisis experto de documentos contables para procesos judiciales, proporcionando informes detallados y testimonio profesional.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300">
+                    <div class="bg-blue-100 p-6 flex justify-center">
+                        <i class="fas fa-book text-5xl text-blue-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Contabilidad Integral</h3>
+                        <p class="text-gray-600">Gestión completa de tus registros contables, estados financieros y cumplimiento de normas contables locales e internacionales.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300">
+                    <div class="bg-blue-100 p-6 flex justify-center">
+                        <i class="fas fa-search-dollar text-5xl text-blue-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Auditoría Financiera</h3>
+                        <p class="text-gray-600">Examen profesional de tus estados financieros para garantizar su exactitud y cumplimiento con las normas aplicables.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300">
+                    <div class="bg-blue-100 p-6 flex justify-center">
+                        <i class="fas fa-file-invoice-dollar text-5xl text-blue-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Asesoría Tributaria</h3>
+                        <p class="text-gray-600">Planificación fiscal estratégica, declaraciones de impuestos y representación ante organismos tributarios.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300">
+                    <div class="bg-blue-100 p-6 flex justify-center">
+                        <i class="fas fa-shield-alt text-5xl text-blue-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">TSS y Seguridad Social</h3>
+                        <p class="text-gray-600">Gestión de afiliaciones, declaraciones y pagos ante la Tesorería de la Seguridad Social para cumplir con tus obligaciones laborales.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300">
+                    <div class="bg-blue-100 p-6 flex justify-center">
+                        <i class="fas fa-lock text-5xl text-blue-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Prevención de Lavado de Activos</h3>
+                        <p class="text-gray-600">Implementación de políticas y procedimientos para cumplir con regulaciones contra el lavado de activos y financiamiento al terrorismo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Equipo de Tributación Fácil" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Sobre Nosotros</h2>
+                    <p class="text-gray-700 mb-6 text-lg">En <span class="font-bold text-blue-700">Tributación Fácil</span> nos especializamos en brindar soluciones integrales en materia contable, tributaria y legal a empresas y profesionales independientes.</p>
+                    <p class="text-gray-700 mb-6">Nuestro equipo de contadores públicos certificados y expertos en legislación fiscal dominicana está comprometido con ofrecer servicios de alta calidad, personalizados y adaptados a las necesidades específicas de cada cliente.</p>
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+                        <p class="text-blue-800 italic">"Nuestra misión es simplificar los procesos contables y tributarios para que puedas enfocarte en lo que realmente importa: hacer crecer tu negocio."</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-check-circle text-blue-700 text-xl"></i>
+                        </div>
+                        <p class="text-gray-700">Más de 10 años de experiencia en el sector</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-blue-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que dicen nuestros clientes</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Tributación Fácil ha sido fundamental para el crecimiento de mi empresa. Su asesoría fiscal nos ha permitido optimizar nuestros impuestos de manera legal y ética."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">JM</span>
+                        </div>
+                        <div>
+                            <p class="font-bold">Juan M.</p>
+                            <p class="text-sm opacity-80">Pequeño empresario</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Excelente servicio en la preparación de nuestros estados financieros y en la representación ante la DGII. Profesionales altamente capacitados y con gran disponibilidad."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">MR</span>
+                        </div>
+                        <div>
+                            <p class="font-bold">María R.</p>
+                            <p class="text-sm opacity-80">Gerente Financiera</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Gracias a su equipo pudimos implementar un sistema de prevención de lavado de activos que cumple con todas las regulaciones locales. Muy recomendados."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-800 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-bold">CA</span>
+                        </div>
+                        <div>
+                            <p class="font-bold">Carlos A.</p>
+                            <p class="text-sm opacity-80">Director de Finanzas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Contáctanos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos listos para ayudarte con todas tus necesidades contables y tributarias. Escríbenos o llámanos para una consulta gratuita.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-100 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-bold text-blue-800 mb-6">Información de Contacto</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Teléfono</h4>
+                                <a href="https://api.whatsapp.com/send?phone=18298695298&text=Hola%2C%20somos%20Tributaci%C3%B3n%20F%C3%A1cil%2C%20c%C3%B3mo%20podemos%20ayudarte%3F" class="text-gray-600 hover:text-blue-700">829-869-5298</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <a href="mailto:tributacionfacil@gmail.com" class="text-gray-600 hover:text-blue-700">tributacionfacil@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Horario</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Síguenos</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-100 text-blue-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-200">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/tributacionfacil" class="bg-blue-100 text-blue-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-200">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 text-blue-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-200">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-100 p-8 rounded-xl shadow-sm">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Servicio de interés</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Seleccione un servicio</option>
+                                <option value="pericial">Prueba Pericial Contable</option>
+                                <option value="contabilidad">Contabilidad Integral</option>
+                                <option value="auditoria">Auditoría Financiera</option>
+                                <option value="impuestos">Asesoría Tributaria</option>
+                                <option value="tss">TSS y Seguridad Social</option>
+                                <option value="lavado">Prevención de Lavado de Activos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white text-blue-800 p-2 rounded-lg mr-3">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Tributación <span class="text-blue-300">Fácil</span></h3>
+                    </div>
+                    <p class="max-w-xs text-blue-200">Expertos en asesoría contable, tributaria y legal para empresas y profesionales en República Dominicana.</p>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white">Prueba Pericial</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Contabilidad</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Auditoría</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Asesoría Tributaria</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">TSS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-blue-200 hover:text-white">Inicio</a></li>
+                        <li><a href="#servicios" class="text-blue-200 hover:text-white">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-blue-200 hover:text-white">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-blue-200 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-blue-300"></i>
+                            <a href="https://api.whatsapp.com/send?phone=18298695298&text=Hola%2C%20somos%20Tributaci%C3%B3n%20F%C3%A1cil%2C%20c%C3%B3mo%20podemos%20ayudarte%3F" class="text-blue-200 hover:text-white">829-869-5298</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-300"></i>
+                            <a href="mailto:tributacionfacil@gmail.com" class="text-blue-200 hover:text-white">tributacionfacil@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-300">
+                <p>&copy; 2023 Tributación Fácil. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
